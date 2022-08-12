@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+
+    <changeSet id="1" author="Igor">
+
+        <preConditions onFail="MARK_RAN" onFailMessage="Tabela gravadora ja existe">
+            <not>
+                <tableExists tableName="Cliente"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="Cliente">
+            <column name="idCliente" type="INTEGER">
+                <constraints primaryKey="true" primaryKeyName="PK_Cliente" nullable="false" unique="true"/>
+            </column>
+
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="senha" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            
+            <column name="nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+
+        </createTable>
+
+        <addAutoIncrement tableName="Cliente" columnName="idCliente" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
+
+    </changeSet>
+
+
+    <changeSet id="2" author="Igor">
+
+        <preConditions onFail="MARK_RAN" onFailMessage="Tabela artista ja existe">
+            <not>
+                <tableExists tableName="Ingresso"/>
+            </not>
+        </preConditions>
+
+
+        <createTable tableName="Ingresso">
+
+            <column name="idIngresso" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ingresso" unique="true"/>
+            </column>
+
+            <column name="valor" type="FLOAT">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <addAutoIncrement tableName="Ingresso" columnName="idIngresso" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
+
+    </changeSet>
+
+
+    <changeSet id="3" author="Igor">
+
+        <preConditions onFail="MARK_RAN" onFailMessage="Tabela artista ja existe">
+            <not>
+                <tableExists tableName="Sessao"/>
+            </not>
+        </preConditions>
+
+
+        <createTable tableName="Sessao">
+
+            <column name="idSessao" type="INTEGER">
+                <constraints nullable="false" unique="true" primaryKey="true" primaryKeyName="PK_sessao"/>
+            </column>
+            
+            <column name="horario" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            
+            <column name="disponibilidade" type="BOOLEAN"/>
+
+
+
+        </createTable>
+
+        <addAutoIncrement tableName="Sessao" columnName="idSessao" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
+
+    </changeSet>
+
+    <changeSet id="4" author="Igor">
+
+        <preConditions onFail="MARK_RAN" onFailMessage="Tabela artista ja existe">
+            <not>
+                <tableExists tableName="Sala"/>
+            </not>
+        </preConditions>
+
+
+        <createTable tableName="Sala">
+
+            <column name="idSala" type="INTEGER">
+                <constraints nullable="false" unique="true" primaryKey="true" primaryKeyName="PK_sala"/>
+            </column>
+            
+            <column name="nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            
+            <column name="capacidadeSala" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <addAutoIncrement tableName="Sala" columnName="idSala" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
+
+    </changeSet>
+
+    <changeSet id="5" author="Igor">
+
+        <preConditions onFail="MARK_RAN" onFailMessage="Tabela artista ja existe">
+            <not>
+                <tableExists tableName="Filme"/>
+            </not>
+        </preConditions>
+            
+
+        <createTable tableName="Filme">
+            
+            <column name="idFilme" type="INTEGER">
+                <constraints nullable="false" unique="true" primaryKeyName="PK_filme" primaryKey="true"/>
+            </column>
+
+            <column name="nomeFilme" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <addAutoIncrement tableName="Filme" columnName="idFilme" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
+
+    </changeSet>
+
+    <changeSet id="6" author="Igor">
+
+        <preConditions onFail="MARK_RAN" onFailMessage="Tabela artista ja existe">
+            <not>
+                <tableExists tableName="GeneroFilme"/>
+            </not>
+        </preConditions>
+
+
+        <createTable tableName="GeneroFilme">
+
+            <column name="idGenero" type="INTEGER">
+                <constraints nullable="false" unique="true" primaryKey="true" primaryKeyName="PK_genero"/>
+            </column>
+
+            <column name="nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <addAutoIncrement tableName="GeneroFilme" columnName="idGenero" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
+
+    </changeSet>
+
+
+</databaseChangeLog>

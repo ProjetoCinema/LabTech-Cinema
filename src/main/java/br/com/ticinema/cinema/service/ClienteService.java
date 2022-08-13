@@ -1,5 +1,6 @@
 package br.com.ticinema.cinema.service;
 
+import br.com.ticinema.cinema.core.crud.CrudService;
 import br.com.ticinema.cinema.domain.Cliente;
 import br.com.ticinema.cinema.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,27 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
-public class ClienteService {
+public class ClienteService extends CrudService<Cliente, Long> {
 
-    @Autowired
-    private ClienteRepository clienteRepository;
 
-    public List<Cliente> listar(){
-        return clienteRepository.findAll();
+    @Override
+    protected Cliente editarEntidade(Cliente recuperado, Cliente entidade) {
 
+        recuperado.setEmail(entidade.getEmail());
+        recuperado.setSenha(entidade.getSenha());
+        recuperado.setNome(entidade.getNome());
+
+        return recuperado;
     }
-
-    public Cliente porId(Long id){
-        return clienteRepository.findById(id).orElse(null);
-    }
-
-    public Cliente criar(Cliente cliente){
-        return clienteRepository.save(cliente);
-    }
-
-
-    public void excluir(Long id){
-        clienteRepository.deleteById(id);
-    }
-
 }

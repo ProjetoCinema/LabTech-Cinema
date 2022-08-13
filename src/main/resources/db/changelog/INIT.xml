@@ -15,7 +15,7 @@
 
         <createTable tableName="Cliente">
             <column name="idCliente" type="INTEGER">
-                <constraints primaryKey="true" primaryKeyName="PK_Cliente" nullable="false" unique="true"/>
+                <constraints primaryKey="true" primaryKeyName="PK_Cliente" nullable="false" />
             </column>
 
             <column name="email" type="VARCHAR(255)">

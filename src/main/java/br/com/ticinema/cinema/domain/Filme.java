@@ -5,10 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 @AllArgsConstructor
@@ -17,8 +20,11 @@ import javax.persistence.Id;
 public class Filme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idfilme;
-    private String nomefilme;
-
+    private Long idFilme;
+    private String nome;
+    private String genero;
+    private String classificacao;
+    @OneToMany(mappedBy = "filme")
+    private Set<Sessao>sessao;
 
 }

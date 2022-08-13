@@ -3,7 +3,7 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
-
+<!-- 
 
     <changeSet id="1" author="Igor">
 
@@ -14,7 +14,7 @@
         </preConditions>
 
         <createTable tableName="Cliente">
-            <column name="idCliente" type="INTEGER">
+            <column name="idCliente" type="BIGINT">
                 <constraints primaryKey="true" primaryKeyName="PK_Cliente" nullable="false" />
             </column>
 
@@ -170,7 +170,7 @@
 
         <addAutoIncrement tableName="GeneroFilme" columnName="idGenero" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
 
-    </changeSet>
+    </changeSet>  -->
 
 
 </databaseChangeLog>

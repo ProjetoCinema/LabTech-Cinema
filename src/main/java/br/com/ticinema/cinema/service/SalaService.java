@@ -10,7 +10,7 @@ public class SalaService extends CrudService<Sala, Long> {
     @Override
     protected Sala editarEntidade(Sala recuperado, Sala entidade) {
         recuperado.setNome(entidade.getNome());
-        recuperado.setCapacidadesala(entidade.getCapacidadesala());
+        recuperado.setCapacidade(entidade.getCapacidade());
         return recuperado;
     }
 }

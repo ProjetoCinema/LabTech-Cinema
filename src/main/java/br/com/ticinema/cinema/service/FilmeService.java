@@ -10,7 +10,7 @@ public class FilmeService extends CrudService<Filme, Long> {
     @Override
     protected Filme editarEntidade(Filme recuperado, Filme entidade) {
 
-        recuperado.setNomefilme(entidade.getNomefilme());
+        recuperado.setNome(entidade.getNome());
 
         return recuperado;
     }

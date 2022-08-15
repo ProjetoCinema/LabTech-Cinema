@@ -3,7 +3,7 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
-<!-- 
+
 
     <changeSet id="1" author="Igor">
 
@@ -14,7 +14,7 @@
         </preConditions>
 
         <createTable tableName="Cliente">
-            <column name="idCliente" type="BIGINT">
+            <column name="idcliente" type="BIGINT">
                 <constraints primaryKey="true" primaryKeyName="PK_Cliente" nullable="false" />
             </column>
 
@@ -25,7 +25,7 @@
             <column name="senha" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>
-            
+
             <column name="nome" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>
@@ -33,7 +33,7 @@
 
         </createTable>
 
-        <addAutoIncrement tableName="Cliente" columnName="idCliente" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
+        <addAutoIncrement tableName="Cliente" columnName="idcliente" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
 
     </changeSet>
 
@@ -49,7 +49,7 @@
 
         <createTable tableName="Ingresso">
 
-            <column name="idIngresso" type="INTEGER">
+            <column name="idingresso" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ingresso" unique="true"/>
             </column>
 
@@ -59,7 +59,7 @@
 
         </createTable>
 
-        <addAutoIncrement tableName="Ingresso" columnName="idIngresso" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
+        <addAutoIncrement tableName="Ingresso" columnName="idingresso" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
 
     </changeSet>
 
@@ -78,11 +78,11 @@
             <column name="idSessao" type="INTEGER">
                 <constraints nullable="false" unique="true" primaryKey="true" primaryKeyName="PK_sessao"/>
             </column>
-            
+
             <column name="horario" type="TIMESTAMP">
                 <constraints nullable="false"/>
             </column>
-            
+
             <column name="disponibilidade" type="BOOLEAN"/>
 
 
@@ -104,21 +104,21 @@
 
         <createTable tableName="Sala">
 
-            <column name="idSala" type="INTEGER">
+            <column name="id_sala" type="INTEGER">
                 <constraints nullable="false" unique="true" primaryKey="true" primaryKeyName="PK_sala"/>
             </column>
-            
+
             <column name="nome" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>
-            
+
             <column name="capacidadeSala" type="INTEGER">
                 <constraints nullable="false"/>
             </column>
 
         </createTable>
 
-        <addAutoIncrement tableName="Sala" columnName="idSala" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
+        <addAutoIncrement tableName="Sala" columnName="id_sala" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
 
     </changeSet>
 
@@ -129,11 +129,11 @@
                 <tableExists tableName="Filme"/>
             </not>
         </preConditions>
-            
+
 
         <createTable tableName="Filme">
-            
-            <column name="idFilme" type="INTEGER">
+
+            <column name="id_filme" type="INTEGER">
                 <constraints nullable="false" unique="true" primaryKeyName="PK_filme" primaryKey="true"/>
             </column>
 
@@ -141,9 +141,13 @@
                 <constraints nullable="false"/>
             </column>
 
+            <column name="genero" type="varchar(255)"/>
+
+            <column name="classificacao" type="varchar(255)"/>
+
         </createTable>
 
-        <addAutoIncrement tableName="Filme" columnName="idFilme" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
+        <addAutoIncrement tableName="Filme" columnName="id_filme" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
 
     </changeSet>
 
@@ -170,7 +174,7 @@
 
         <addAutoIncrement tableName="GeneroFilme" columnName="idGenero" columnDataType="INTEGER" startWith="1" incrementBy="1"/>
 
-    </changeSet>  -->
+    </changeSet>
 
 
 </databaseChangeLog>

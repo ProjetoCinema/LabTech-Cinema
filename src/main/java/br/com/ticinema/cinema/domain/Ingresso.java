@@ -30,6 +30,6 @@ public class Ingresso {
     private Sessao sessao;
     
     @ManyToOne
-    @JoinColumn(name="id_cliente", nullable=false)
+    @JoinColumn(name="id_cliente", nullable = false)
     private Cliente cliente;
 }

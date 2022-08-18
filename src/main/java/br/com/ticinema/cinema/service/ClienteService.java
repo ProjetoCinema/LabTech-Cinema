@@ -4,6 +4,7 @@ import br.com.ticinema.cinema.core.crud.CrudService;
 import br.com.ticinema.cinema.domain.Cliente;
 import br.com.ticinema.cinema.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

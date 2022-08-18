@@ -57,6 +57,11 @@
                 <constraints nullable="false"/>
             </column>
 
+            <column name="id_cliente" type="integer">
+                <constraints foreignKeyName="FK_ingresso_cliente" referencedColumnNames="idcliente"
+                             referencedTableName="cliente"/>
+            </column>
+
         </createTable>
 
         <addAutoIncrement tableName="Ingresso" columnName="idingresso" columnDataType="INTEGER" startWith="1" incrementBy="1"/>

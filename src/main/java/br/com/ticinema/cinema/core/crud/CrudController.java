@@ -12,6 +12,9 @@ import java.util.Objects;
 public abstract class CrudController<T, ID> {
 
     @Autowired
+    protected CrudRepository<T, ID> repository;
+
+    @Autowired
     private CrudService<T, ID> service;
 
 

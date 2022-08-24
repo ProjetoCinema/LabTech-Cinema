@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="79a2a3a2-1999-4aa4-8d1c-2b075b4aaec1" name="Changes" comment="Criação de algumas querries e ligação entre cliente e ingresso">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/ClienteConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/FilmeConveter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/IngressoConveter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/SalaConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/SessaoConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/core/crud/CrudConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/dto/ClienteDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/dto/FilmeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/dto/IngressoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/dto/SalaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/dto/SessaoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/FilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/FilmeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/IngressoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/IngressoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/SalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/SalaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/SessaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/SessaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/core/crud/CrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/core/crud/CrudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/core/crud/CrudDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/core/crud/CrudDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/core/crud/CrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/core/crud/CrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/ChaveCompostaSessao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Filme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Ingresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Ingresso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Sala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Sessao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Sessao.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2DJG4IvpLjrONyFuv8VssznUMK2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projetoSpring/cinema&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projetoSpring\LabTech-Cinema\src\main\java\br\com\ticinema\cinema" />
+      <recent name="C:\projetoSpring\LabTech-Cinema\src\main\java\br\com\ticinema\cinema\dto" />
+      <recent name="C:\projetoSpring\LabTech-Cinema" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.ticinema.cinema.core.crud" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Cinema" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../Program Files/Java/jdk-11.0.15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="br.com.ticinema.cinema.CinemaApplication" />
+      <module name="cinema" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79a2a3a2-1999-4aa4-8d1c-2b075b4aaec1" name="Changes" comment="" />
+      <created>1660409583207</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660409583207</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Configuração da tabela(INIT) sem as relações">
+      <created>1660597317393</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660597317393</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Criação de algumas querries e ligação entre cliente e ingresso">
+      <created>1660792940249</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660792940249</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Crud feito para as classes Cliente, Filme, Sessao, Sala e Ingresso" />
+    <MESSAGE value="Configuração da tabela(INIT) sem as relações" />
+    <MESSAGE value="Criação de algumas querries e ligação entre cliente e ingresso" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação de algumas querries e ligação entre cliente e ingresso" />
+  </component>
+</project>

@@ -1,30 +1,40 @@
 package br.com.ticinema.cinema.domain;
 
-
+import br.com.ticinema.cinema.core.CrudDomain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Filme {
+public class Filme implements CrudDomain<Long> {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idFilme;
-    private String nome;
+    private Long idfilme;
+
+    private String nomefilme;
     private String genero;
     private String classificacao;
-    @OneToMany(mappedBy = "filme")
-    private Set<Sessao>sessao;
 
+
+
+
+
+
+
+
+
+
+
+
+
+    @Override
+    public Long getId() {
+        return idfilme;
+    }
 }

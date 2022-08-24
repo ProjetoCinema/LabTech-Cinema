@@ -1,35 +1,41 @@
 package br.com.ticinema.cinema.domain;
 
+import br.com.ticinema.cinema.core.CrudDomain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Ingresso {
+public class Ingresso implements CrudDomain<Long> {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idingresso;
+
     private Float valor;
-    
+    private int quantidade;
+
     @ManyToOne
-    @JoinColumns({
-        @JoinColumn(name="id_filme"),
-        @JoinColumn(name="id_sala")
-    })
-    private Sessao sessao;
-    
-    @ManyToOne
-    @JoinColumn(name="id_cliente", nullable = false)
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
+
+
+    @ManyToOne
+    @JoinColumn(name = "sessao_id")
+    private Sessao sessao;
+
+
+    @Override
+    public Long getId() {
+        return idingresso;
+    }
 }
+
+

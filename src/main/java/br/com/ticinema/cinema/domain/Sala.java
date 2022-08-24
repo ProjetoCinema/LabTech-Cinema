@@ -1,28 +1,29 @@
 package br.com.ticinema.cinema.domain;
 
+import br.com.ticinema.cinema.core.CrudDomain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Sala {
+public class Sala implements CrudDomain<Long> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idSala;
+    private Long idsala;
+
     private String nome;
-    private Integer capacidade;
-    @OneToMany(mappedBy = "sala")
-    Set<Sessao>sessao;
-  
+    private Integer capacidadesala;
+
+    @Override
+    public Long getId() {
+        return idsala;
+    }
 }

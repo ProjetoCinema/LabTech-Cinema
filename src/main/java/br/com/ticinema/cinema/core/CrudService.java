@@ -38,15 +38,16 @@ public abstract class CrudService<T, ID> {
         var recuperado= porId(id);
 
         if(Objects.isNull(recuperado)){
-            throw new RuntimeException("Não foi encontrado.");
+
+            throw new RuntimeException("Não foi encontrado.") ;
         }
 
-        var entidadeSalvar = editarEntidade(recuperado, entidade);
+        var entidadeSalvar = editarEntidade(recuperado, entidade, id);
 
         return repository.save(entidadeSalvar);
     }
 
 
-    protected abstract T editarEntidade(T recuperado, T entidade);
+    protected abstract T editarEntidade(T recuperado, T entidade, ID id);
 
 }

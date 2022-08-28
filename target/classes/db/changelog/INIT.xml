@@ -35,7 +35,71 @@
 
     </changeSet>
 
+
     <changeSet id="2" author="Igor">
+        <preConditions onFail="MARK_RAN" onFailMessage="Tabela Existente">
+            <not>
+                <tableExists tableName="sala"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="sala">
+
+            <column name="idsala" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SALA"/>
+            </column>
+
+            <column name="nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="capacidadesala" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <addAutoIncrement tableName="sala" columnName="idsala" startWith="1" columnDataType="INT" incrementBy="1"/>
+
+    </changeSet>
+
+
+
+    <changeSet id="3" author="Igor">
+        <preConditions onFail="MARK_RAN" onFailMessage="Tabela Existente">
+            <not>
+                <tableExists tableName="filme"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="filme">
+
+            <column name="idfilme" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_FILME"/>
+            </column>
+
+            <column name="nomefilme" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="classificacao" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="genero" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+
+
+        </createTable>
+
+        <addAutoIncrement tableName="filme" columnName="idfilme" startWith="1" columnDataType="INT" incrementBy="1"/>
+
+    </changeSet>
+
+
+
+    <changeSet id="4" author="Igor">
         <preConditions onFail="MARK_RAN" onFailMessage="Tabela Existente">
             <not>
                 <tableExists tableName="sessao"/>
@@ -56,6 +120,18 @@
                 <constraints nullable="false"/>
             </column>
 
+            <column name="sala_id" type="INTEGER">
+                <constraints nullable="false" unique="true" foreignKeyName="FK_sessao_sala"
+                             referencedTableName="sala"
+                             referencedColumnNames="idsala"/>
+            </column>
+
+            <column name="filme_id" type="integer">
+                <constraints nullable="false" unique="true" foreignKeyName="FK_sessao_filme"
+                             referencedTableName="filme"
+                             referencedColumnNames="idfilme"/>
+            </column>
+
         </createTable>
 
         <addAutoIncrement tableName="sessao" columnName="idsessao" startWith="1" columnDataType="INT" incrementBy="1"/>
@@ -63,7 +139,7 @@
     </changeSet>
 
 
-    <changeSet id="3" author="Igor">
+    <changeSet id="5" author="Igor">
         <preConditions onFail="MARK_RAN" onFailMessage="Tabela Existente">
             <not>
                 <tableExists tableName="ingresso"/>
@@ -102,69 +178,6 @@
         <addAutoIncrement tableName="ingresso" columnName="idingresso" startWith="1" columnDataType="INT" incrementBy="1"/>
 
     </changeSet>
-
-
-    <changeSet id="4" author="Igor">
-        <preConditions onFail="MARK_RAN" onFailMessage="Tabela Existente">
-            <not>
-                <tableExists tableName="sala"/>
-            </not>
-        </preConditions>
-
-        <createTable tableName="sala">
-
-            <column name="idsala" type="int">
-                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SALA"/>
-            </column>
-
-            <column name="nome" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-
-            <column name="capacidadesala" type="INTEGER">
-                <constraints nullable="false"/>
-            </column>
-
-        </createTable>
-
-        <addAutoIncrement tableName="sala" columnName="idsala" startWith="1" columnDataType="INT" incrementBy="1"/>
-
-    </changeSet>
-
-
-
-    <changeSet id="5" author="Igor">
-        <preConditions onFail="MARK_RAN" onFailMessage="Tabela Existente">
-            <not>
-                <tableExists tableName="filme"/>
-            </not>
-        </preConditions>
-
-        <createTable tableName="filme">
-
-            <column name="idfilme" type="int">
-                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_FILME"/>
-            </column>
-
-            <column name="nomefilme" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-
-            <column name="classificacao" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-
-            <column name="genero" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-
-
-        </createTable>
-
-        <addAutoIncrement tableName="filme" columnName="idfilme" startWith="1" columnDataType="INT" incrementBy="1"/>
-
-    </changeSet>
-
 
 
 

@@ -1,4 +1,4 @@
-package br.com.ticinema.cinema.DTO;
+package br.com.ticinema.cinema.DTO.sala;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

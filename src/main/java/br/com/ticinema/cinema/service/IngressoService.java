@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 public class IngressoService extends CrudService<Ingresso, Long> {
 
     @Override
-    protected Ingresso editarEntidade(Ingresso recuperado, Ingresso entidade) {
-        recuperado.setIdingresso(entidade.getIdingresso());
-        recuperado.setValor(entidade.getValor());
+    protected Ingresso editarEntidade(Ingresso recuperado, Ingresso entidade, Long id) {
+        recuperado.setIdingresso(id);
+        recuperado.setValor(entidade.getValorIngresso()*entidade.getQuantidade());
         recuperado.setQuantidade(entidade.getQuantidade());
         recuperado.setCliente(entidade.getCliente());
         recuperado.setSessao(entidade.getSessao());

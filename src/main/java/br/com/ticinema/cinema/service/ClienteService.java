@@ -7,12 +7,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClienteService extends CrudService<Cliente, Long> {
     @Override
-    protected Cliente editarEntidade(Cliente recuperado, Cliente entidade) {
-        recuperado.setIdcliente(entidade.getIdcliente());
+    protected Cliente editarEntidade(Cliente recuperado, Cliente entidade, Long id) {
+
+        recuperado.setIdcliente(id);
         recuperado.setSenha(entidade.getSenha());
         recuperado.setEmail(entidade.getEmail());
         recuperado.setNome(entidade.getNome());
-        recuperado.setIngressos(entidade.getIngressos());
+        recuperado.getIngressos();
 
 
         return recuperado;

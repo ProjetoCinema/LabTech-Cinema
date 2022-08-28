@@ -1,6 +1,8 @@
-package br.com.ticinema.cinema.DTO;
+package br.com.ticinema.cinema.DTO.sessao;
 
+import br.com.ticinema.cinema.domain.Filme;
 import br.com.ticinema.cinema.domain.Ingresso;
+import br.com.ticinema.cinema.domain.Sala;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,4 +21,10 @@ public class SessaoDTO {
     private LocalDate horario;
     private Boolean disponivel;
     private List<Ingresso> ingresso;
+    private Long salaId;
+    private Sala sala;
+    private Long filmeId;
+    private Filme filme;
+
+
 }

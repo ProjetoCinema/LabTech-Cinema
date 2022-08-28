@@ -30,7 +30,7 @@ public abstract class CrudController<T extends CrudDomain<ID> , D, ID> extends R
 
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> excluir(@PathVariable("id") ID id){
         service.excluir(id);
         return  ResponseEntity.noContent().build();

@@ -1,6 +1,6 @@
 package br.com.ticinema.cinema.converter;
 
-import br.com.ticinema.cinema.DTO.SalaDTO;
+import br.com.ticinema.cinema.DTO.sala.SalaDTO;
 import br.com.ticinema.cinema.core.CrudConverter;
 import br.com.ticinema.cinema.domain.Sala;
 import org.springframework.stereotype.Component;

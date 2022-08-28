@@ -1,11 +1,8 @@
 package br.com.ticinema.cinema.converter;
 
-import br.com.ticinema.cinema.DTO.ClienteDTO;
+import br.com.ticinema.cinema.DTO.cliente.ClienteDTO;
 import br.com.ticinema.cinema.core.CrudConverter;
 import br.com.ticinema.cinema.domain.Cliente;
-import br.com.ticinema.cinema.domain.Ingresso;
-import br.com.ticinema.cinema.repository.ClienteRepository;
-import br.com.ticinema.cinema.repository.IngressoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

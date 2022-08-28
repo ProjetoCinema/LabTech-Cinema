@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -27,15 +26,13 @@ public class Sessao implements CrudDomain<Long> {
     @OneToMany(mappedBy = "sessao")
     private List<Ingresso> ingressos = new ArrayList<>();
 
-//    @OneToOne
-//    @JoinColumn(name = "sala_id", referencedColumnName = "idsala")
-//    private Sala sala;
-//
-//    @OneToOne
-//    @JoinColumn(name = "filme_id", referencedColumnName = "idfilme")
-//    private Filme filme;
+    @OneToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "sala_id")
+    private Sala sala;
 
-
+    @OneToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "filme_id")
+    private Filme filme;
 
 
     @Override

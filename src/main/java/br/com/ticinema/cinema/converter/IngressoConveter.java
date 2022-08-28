@@ -1,7 +1,7 @@
 package br.com.ticinema.cinema.converter;
 
 
-import br.com.ticinema.cinema.DTO.IngressoDTO;
+import br.com.ticinema.cinema.DTO.ingresso.IngressoDTO;
 import br.com.ticinema.cinema.core.CrudConverter;
 import br.com.ticinema.cinema.domain.Ingresso;
 import br.com.ticinema.cinema.repository.ClienteRepository;
@@ -25,10 +25,10 @@ public class IngressoConveter implements CrudConverter<Ingresso, IngressoDTO> {
         var dto = new IngressoDTO();
 
         dto.setIdingresso(entidade.getIdingresso());
-        dto.setValor(entidade.getValor());
+        dto.setValorTotal(entidade.getValor());
         dto.setQuantidade(entidade.getQuantidade());
-        dto.setClienteDTO(clienteConverter.entidadeParaDTO(entidade.getCliente()));
-        dto.setSessaoDTO(sessaoConverter.entidadeParaDTO(entidade.getSessao()));
+
+
 
         return dto;
     }
@@ -36,10 +36,17 @@ public class IngressoConveter implements CrudConverter<Ingresso, IngressoDTO> {
     @Override
     public Ingresso dtoParaEntidade(IngressoDTO dto) {
 
+
+        var quantidade =  dto.getQuantidade().floatValue();
+
         var ingresso = new Ingresso();
+
         ingresso.setIdingresso(dto.getIdingresso());
-        ingresso.setValor(dto.getValor());
+
         ingresso.setQuantidade(dto.getQuantidade());
+
+        ingresso.setValor((ingresso.getValorIngresso())*(quantidade));
+
 
         ingresso.setCliente(clienteRepository.findById(dto.getClienteId()).orElse(null));
 

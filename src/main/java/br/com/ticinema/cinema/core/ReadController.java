@@ -14,12 +14,15 @@ import java.util.stream.Collectors;
 public abstract class ReadController<T extends CrudDomain<ID>, D, ID> {
 
     @Autowired
+    protected CrudRepository<T, ID> repository;
+
+    @Autowired
     protected CrudService<T, ID> service;
 
     @Autowired
     protected CrudConverter<T, D> converter;
 
-    @GetMapping
+    @GetMapping("/pagina")
     public ResponseEntity<Page<D>> paginada(Pageable pageable){
 
         var listaPaginada = service.paginada(pageable).map(converter::entidadeParaDTO);

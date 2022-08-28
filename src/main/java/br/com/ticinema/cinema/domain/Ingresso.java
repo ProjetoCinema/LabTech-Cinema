@@ -6,7 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -31,6 +32,9 @@ public class Ingresso implements CrudDomain<Long> {
     @JoinColumn(name = "sessao_id")
     private Sessao sessao;
 
+
+    @Transient
+    private Float valorIngresso = 10.0F;
 
     @Override
     public Long getId() {

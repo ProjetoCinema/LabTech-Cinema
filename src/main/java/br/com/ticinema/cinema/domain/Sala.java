@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -21,6 +18,10 @@ public class Sala implements CrudDomain<Long> {
 
     private String nome;
     private Integer capacidadesala;
+
+    @OneToOne(mappedBy = "sala")
+    private Sessao sessao;
+
 
     @Override
     public Long getId() {

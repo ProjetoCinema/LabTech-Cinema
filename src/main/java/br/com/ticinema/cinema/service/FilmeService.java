@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class FilmeService extends CrudService<Filme, Long> {
     @Override
-    protected Filme editarEntidade(Filme recuperado, Filme entidade) {
+    protected Filme editarEntidade(Filme recuperado, Filme entidade, Long id) {
 
-        recuperado.setIdfilme(entidade.getIdfilme());
+        recuperado.setIdfilme(id);
         recuperado.setNomefilme(entidade.getNomefilme());
         recuperado.setClassificacao(entidade.getClassificacao());
         recuperado.setGenero(entidade.getGenero());

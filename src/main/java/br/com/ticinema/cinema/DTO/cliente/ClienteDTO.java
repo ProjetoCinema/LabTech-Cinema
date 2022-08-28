@@ -1,5 +1,6 @@
-package br.com.ticinema.cinema.DTO;
+package br.com.ticinema.cinema.DTO.cliente;
 
+import br.com.ticinema.cinema.DTO.ingresso.IngressoDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,4 +18,10 @@ public class ClienteDTO {
     private String senha;
     private List<IngressoDTO> ingresso;
 
+    public ClienteDTO(Long idcliente, String email, String nome, List<IngressoDTO> ingresso) {
+        this.idcliente = idcliente;
+        this.email = email;
+        this.nome = nome;
+        this.ingresso = ingresso;
+    }
 }

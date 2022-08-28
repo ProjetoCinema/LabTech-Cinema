@@ -21,7 +21,8 @@ public class Filme implements CrudDomain<Long> {
     private String genero;
     private String classificacao;
 
-
+    @OneToOne(mappedBy = "filme")
+    private Sessao sessao;
 
 
 

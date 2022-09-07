@@ -13,6 +13,8 @@ public abstract class CrudController<T extends CrudDomain<ID> , D, ID> extends R
         var entidade = converter.dtoParaEntidade(dto);
         var salvo = service.criar(entidade);
 
+
+
         ServletUriComponentsBuilder builder = ServletUriComponentsBuilder.fromCurrentRequest();
 
         var uri = builder.path("/{id}").buildAndExpand(salvo.getId()).toUri();

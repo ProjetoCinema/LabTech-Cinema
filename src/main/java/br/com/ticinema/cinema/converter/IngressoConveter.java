@@ -2,12 +2,18 @@ package br.com.ticinema.cinema.converter;
 
 
 import br.com.ticinema.cinema.DTO.ingresso.IngressoDTO;
+import br.com.ticinema.cinema.DTO.ingresso.IngressoIngressoDTO;
 import br.com.ticinema.cinema.core.CrudConverter;
 import br.com.ticinema.cinema.domain.Ingresso;
 import br.com.ticinema.cinema.repository.ClienteRepository;
+import br.com.ticinema.cinema.repository.IngressoRepository;
 import br.com.ticinema.cinema.repository.SessaoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 @AllArgsConstructor
@@ -17,7 +23,7 @@ public class IngressoConveter implements CrudConverter<Ingresso, IngressoDTO> {
       private final SessaoConverter sessaoConverter;
       private final ClienteRepository clienteRepository;
       private final SessaoRepository sessaoRepository;
-
+      private final IngressoRepository ingressoRepository;
 
     @Override
     public IngressoDTO entidadeParaDTO(Ingresso entidade) {
@@ -45,7 +51,7 @@ public class IngressoConveter implements CrudConverter<Ingresso, IngressoDTO> {
 
         ingresso.setQuantidade(dto.getQuantidade());
 
-        ingresso.setValor((ingresso.getValorIngresso())*(quantidade));
+        ingresso.setValor(ingresso.getValorIngresso().multiply(BigDecimal.valueOf(quantidade)));
 
 
         ingresso.setCliente(clienteRepository.findById(dto.getClienteId()).orElse(null));
@@ -54,4 +60,15 @@ public class IngressoConveter implements CrudConverter<Ingresso, IngressoDTO> {
 
         return ingresso;
     }
+
+    public List<IngressoIngressoDTO> mostrarIngresso(List<Ingresso> ingressos){
+        return ingressos.stream()
+                .map(i -> new IngressoIngressoDTO(i.getIdingresso(),
+                        i.getValor(),
+                        i.getQuantidade(), i.getSessao().getIdsessao(), i.getSessao().getHorario(),
+                        i.getCliente().getIdcliente(), i.getCliente().getNome()
+                )).collect(Collectors.toList());
+    }
+
+
 }

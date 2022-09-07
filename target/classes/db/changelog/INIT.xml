@@ -156,7 +156,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="valor" type="float">
+            <column name="valor" type="java.math.BigDecimal">
                 <constraints nullable="false"/>
             </column>
 

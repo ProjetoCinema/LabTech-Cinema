@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class Ingresso implements CrudDomain<Long> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idingresso;
 
-    private Float valor;
+    private BigDecimal valor;
     private int quantidade;
 
     @ManyToOne
@@ -34,7 +35,7 @@ public class Ingresso implements CrudDomain<Long> {
 
 
     @Transient
-    private Float valorIngresso = 10.0F;
+    private BigDecimal valorIngresso = new BigDecimal("10.0");
 
     @Override
     public Long getId() {

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @AllArgsConstructor
@@ -12,7 +13,7 @@ import java.time.LocalDate;
 public class IngressoSessaoDTO {
 
     private Long idingresso;
-    private Float valorTotal;
+    private BigDecimal valorTotal;
     private Integer quantidade;
     private Long cliente;
     private String nome;

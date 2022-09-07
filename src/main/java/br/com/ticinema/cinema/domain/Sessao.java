@@ -26,14 +26,13 @@ public class Sessao implements CrudDomain<Long> {
     @OneToMany(mappedBy = "sessao")
     private List<Ingresso> ingressos = new ArrayList<>();
 
-    @OneToOne(cascade = CascadeType.REMOVE)
+    @OneToOne
     @JoinColumn(name = "sala_id")
     private Sala sala;
 
-    @OneToOne(cascade = CascadeType.REMOVE)
+    @OneToOne
     @JoinColumn(name = "filme_id")
     private Filme filme;
-
 
     @Override
     public Long getId() {

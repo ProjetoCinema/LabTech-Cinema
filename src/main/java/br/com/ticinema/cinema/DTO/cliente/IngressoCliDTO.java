@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -14,7 +15,8 @@ import java.util.List;
 public class IngressoCliDTO {
 
     private Long idingresso;
-    private Float valorTotal;
+    private BigDecimal valorUnitario;
+    private BigDecimal valorTotal;
     private Integer quantidade;
     private Long sessao;
     private LocalDate horario;

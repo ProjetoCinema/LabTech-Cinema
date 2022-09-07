@@ -5,6 +5,9 @@ import br.com.ticinema.cinema.core.CrudConverter;
 import br.com.ticinema.cinema.domain.Sala;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class SalaConverter implements CrudConverter<Sala, SalaDTO> {
     @Override
@@ -28,4 +31,14 @@ public class SalaConverter implements CrudConverter<Sala, SalaDTO> {
         sala.setCapacidadesala(dto.getCapacidadeSala());
 
         return sala;    }
+
+    public List<SalaDTO> mostrarSala(List<Sala> salas){
+        return salas.stream()
+                .map(sala -> new SalaDTO(sala.getIdsala(),
+
+                        sala.getNome(),
+                        sala.getCapacidadesala()
+                )).collect(Collectors.toList());
+    }
+
 }

@@ -3,7 +3,11 @@ package br.com.ticinema.cinema.converter;
 import br.com.ticinema.cinema.DTO.filme.FilmeDTO;
 import br.com.ticinema.cinema.core.CrudConverter;
 import br.com.ticinema.cinema.domain.Filme;
+import br.com.ticinema.cinema.service.FilmeService;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class FilmeConveter implements CrudConverter<Filme, FilmeDTO> {
@@ -32,4 +36,14 @@ public class FilmeConveter implements CrudConverter<Filme, FilmeDTO> {
 
         return filme;
     }
+
+    public List<FilmeDTO> mostrarFilmes(List<Filme> filmes) {
+        return filmes.stream()
+                .map(f -> new FilmeDTO(f.getIdfilme(),
+                        f.getNomefilme(),
+                        f.getClassificacao(),
+                        f.getGenero())).collect(Collectors.toList());
+
+    }
+
 }

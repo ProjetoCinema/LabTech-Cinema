@@ -4,53 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a2a3a2-1999-4aa4-8d1c-2b075b4aaec1" name="Changes" comment="Criação de algumas querries e ligação entre cliente e ingresso">
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/ticinema/cinema/converter/ClienteConverterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/ticinema/cinema/fixture/ClienteFixture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/ticinema/cinema/fixture/IngreessoFixture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/cliente/CliSelecDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/cliente/CliSelecDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/cliente/IngressoCliDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/cliente/IngressoCliDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/filme/FilmeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/filme/FilmeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/ingresso/IngressoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/ingresso/IngressoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/ingresso/IngressoIngressoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/ingresso/IngressoIngressoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/sessao/IngressoSessaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/DTO/sessao/IngressoSessaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/FilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/FilmeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/IngressoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/IngressoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/SalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/SalaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/SessaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/controller/SessaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/ClienteConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/ClienteConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/FilmeConveter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/FilmeConveter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/IngressoConveter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/IngressoConveter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/SalaConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/SalaConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/SessaoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/converter/SessaoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/core/CrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/core/CrudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Ingresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Ingresso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Sessao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/domain/Sessao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/repository/IngressoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/repository/IngressoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/service/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/service/IngressoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ticinema/cinema/service/IngressoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/INIT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/INIT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/DTO/cliente/CliSelecDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/DTO/cliente/CliSelecDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/DTO/cliente/IngressoCliDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/DTO/cliente/IngressoCliDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/DTO/ingresso/IngressoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/DTO/ingresso/IngressoDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/DTO/ingresso/IngressoIngressoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/DTO/ingresso/IngressoIngressoDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/DTO/sessao/IngressoSessaoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/DTO/sessao/IngressoSessaoDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/controller/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/controller/ClienteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/controller/IngressoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/controller/IngressoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/controller/SessaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/controller/SessaoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/converter/ClienteConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/converter/ClienteConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/converter/IngressoConveter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/converter/IngressoConveter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/core/CrudController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/core/CrudController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/domain/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/domain/Cliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/domain/Ingresso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/domain/Ingresso.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/domain/Sessao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/domain/Sessao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/service/ClienteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/service/ClienteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/service/IngressoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/ticinema/cinema/service/IngressoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/INIT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/changelog/INIT.xml" afterDir="false" />
-    </list>
+    <list default="true" id="79a2a3a2-1999-4aa4-8d1c-2b075b4aaec1" name="Changes" comment="Criação de algumas querries e ligação entre cliente e ingresso" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

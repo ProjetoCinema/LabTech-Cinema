@@ -36,6 +36,16 @@ public class IngressoService extends CrudService<Ingresso, Long> {
 
     @Override
     protected Ingresso editarEntidade(Ingresso recuperado, Ingresso entidade, Long id) {
+
+        var quantidadeIngre = (repository
+                .recuperarPorIds(Collections.singletonList(entidade.getSessao().getIdsessao()))) +
+                entidade.getQuantidade() - recuperado.getQuantidade();
+        var quantiMax = entidade.getSessao().getSala().getCapacidadesala();
+
+        if(quantidadeIngre > quantiMax) {
+            ResponseEntity.ok().body("Deu certo");
+            return null;
+        }
         recuperado.setIdingresso(id);
         recuperado.setValor(entidade.getValorIngresso().multiply(BigDecimal.valueOf(entidade.getQuantidade())));
         recuperado.setQuantidade(entidade.getQuantidade());
